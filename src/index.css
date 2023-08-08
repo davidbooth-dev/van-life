@@ -13,6 +13,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  width:100%;
 }
 
 a {
@@ -30,6 +31,7 @@ body {
   /* place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  margin-bottom:50px;
 }
 
 h1 {
@@ -87,9 +89,20 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.site-wrapper {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
 
+a.active-link{
+    font-weight: bold;
+    text-decoration: underline;
+    color: #161616;
+}
 header {
-    height: 110px;
+    height: 90px;
     display: flex;
     align-items: center;
     padding-block: 10px;
@@ -109,25 +122,27 @@ header a {
     font-weight: 600;
     padding: 5px 20px;
 }
-
 header a:hover {
     color: #161616;
     text-decoration: underline;
 }
 
-footer{
-    height: 60px;
-    width:100%;
-    background: #252525;
-    position:fixed;
-    bottom:0;
+main {
+    margin-bottom: 84px;
 }
 
-footer p{
-    text-align: center;
+footer {
+    background-color: #161616;
     color: #AAAAAA;
-    line-height:2.5;
+    height: 74px;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    font-weight: 500;
 }
+
 .link-button {
     display: inline-block;
     text-align: center;
@@ -145,6 +160,17 @@ footer p{
     transform: translate(1px, 1px);
 }
 
+.back-button {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 26px;
+}
+
+.back-button span:hover {
+    text-decoration: underline;
+}
 /*** HOME PAGE ***/
 .home-container {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url("/src/assets/home-hero.png") no-repeat center center;
@@ -229,6 +255,22 @@ footer p{
 
 
 /*** VAN PAGES ***/
+.van-nav {
+    display: flex;
+}
+
+.van-nav a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 500;
+    padding: 5px 20px;
+}
+
+.van-nav a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: 600;
+}
 .van-list-container {
     padding-inline: 23px
 }
@@ -309,7 +351,6 @@ i[class*='van-type-'] {
     padding: 7px 14px;
 }
 
-
 .van-detail-container {
     padding: 27px;
 }
@@ -361,4 +402,107 @@ i[class*='van-type-'] {
     background-color: #FF8C38;
     color: white;
     font-size: 1.125rem;
+}
+
+.host-nav {
+    display: flex;
+}
+
+.host-nav a {
+    text-decoration: none;
+    color: #4D4D4D;
+    font-weight: 500;
+    padding: 5px 20px;
+}
+
+.host-nav a:hover {
+    color: #161616;
+    text-decoration: underline;
+    font-weight: 600;
+}
+.host-vans-list {
+    padding-inline: 26px;
+}
+
+.host-vans-title {
+    padding-inline: 26px;
+}
+
+.host-van-single {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 15px;
+    padding-block: 18px;
+    padding-left: 24px;
+}
+
+.host-van-single > img {
+    height: 70px;
+    border-radius: 5px;
+    margin-right: 17px;
+}
+
+.host-van-info h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-block: 10px;
+}
+
+.host-van-info p {
+    margin-block: 10px;
+}
+
+.host-van-detail-container{
+    background-color: white;
+    padding: 24px;
+    margin: 30px 26px;
+}
+
+.host-van-detail{
+    display: flex;
+    align-items: center;
+    padding-bottom:20px;
+}
+.host-van-detail > img{
+    height: 140px;
+    border-radius: 5px;
+    margin-right: 17px;
+}
+.host-van-detail-info{
+    display:flex;
+    flex-direction:column;
+}
+.host-van-detail-info > i {
+    align-self: flex-start;
+}
+.host-van-detail-info p{
+    margin-block: 5px;
+}
+.host-van-detail-info h2{
+    margin-block: 5px;
+}
+
+.host-van-detail-info > h4 {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    margin:10px;
+}
+.host-van-detail-info > h4 > span {
+    font-weight: 500;
+}
+.host-van-price {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.host-van-price > span {
+    font-size: 16px;
+    color: #4D4D4D;
+}
+
+.host-van-detail-image {
+    height: 100px;
+    border-radius: 5px;
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const Vans = () => {
     const [allVans, setAllVans] = useState([])
@@ -26,12 +26,12 @@ const Vans = () => {
     return (
         <>
             <h1>Explore our Van options.</h1>
-            <ul>
-                <li>Simple</li>
-                <li>Luxury</li>
-                <li>Rugged</li>
-                <li>Clear Filters</li>
-            </ul>
+            <nav className="van-nav">
+                <NavLink>Simple</NavLink>
+                <NavLink>Luxury</NavLink>
+                <NavLink>Rugged</NavLink>
+                <NavLink>Clear Filters</NavLink>
+            </nav>
             <div className="van-list-container">
                 <div className="van-list">
                     {vanElements}
