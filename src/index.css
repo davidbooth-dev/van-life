@@ -4,9 +4,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color-scheme: light;
+  color: rgba(15, 11, 11, 0.87);
+  background-color: #eeeaea;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -129,6 +129,7 @@ header a:hover {
 
 main {
     margin-bottom: 84px;
+    padding-inline: 23px;
 }
 
 footer {
@@ -226,7 +227,7 @@ footer {
 }
 
 .about-page-content h1 {
-    line-height: 38px;
+    line-height: 48px;
 }
 
 .about-page-content p {
@@ -255,7 +256,7 @@ footer {
 
 
 /*** VAN PAGES ***/
-.van-nav {
+/* .van-nav {
     display: flex;
 }
 
@@ -270,11 +271,18 @@ footer {
     color: #161616;
     text-decoration: underline;
     font-weight: 600;
-}
+} */
 .van-list-container {
-    padding-inline: 23px
+    /* padding-inline: 23px; */
+}
+.van-list-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.van-list-filter-buttons > a {
+    margin-right: 15px;
+}
 .van-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -352,7 +360,7 @@ i[class*='van-type-'] {
 }
 
 .van-detail-container {
-    padding: 27px;
+    /* padding: 27px; */
 }
 
 .van-detail-container .back-button {
@@ -421,11 +429,11 @@ i[class*='van-type-'] {
     font-weight: 600;
 }
 .host-vans-list {
-    padding-inline: 26px;
+    /* padding-inline: 26px; */
 }
 
 .host-vans-title {
-    padding-inline: 26px;
+    /* padding-inline: 26px; */
 }
 
 .host-van-single {
@@ -456,7 +464,7 @@ i[class*='van-type-'] {
 .host-van-detail-container{
     background-color: white;
     padding: 24px;
-    margin: 30px 26px;
+    margin: 30px 0;
 }
 
 .host-van-detail{
@@ -505,4 +513,24 @@ i[class*='van-type-'] {
 .host-van-detail-image {
     height: 100px;
     border-radius: 5px;
+}
+
+.error-container{
+    display:flex;
+    flex-direction:column;
+}
+.error-container a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    background-color: #2b2724;
+    border: none;
+    width: 100%;
+    margin-top: 27px;
+    padding-block: .75rem;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform .1s ease-in-out;
 }
